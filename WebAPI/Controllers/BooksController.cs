@@ -16,7 +16,6 @@ namespace WebAPI.Controllers
             _bookService = bookService;
         }
 
-
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
@@ -36,7 +35,7 @@ namespace WebAPI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest();
+            return BadRequest(result);
         }
 
         [HttpPost("addbook")]
@@ -47,7 +46,7 @@ namespace WebAPI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest();
+            return BadRequest(result);
         }
 
         [HttpGet("getallbookdetails")]
@@ -58,7 +57,7 @@ namespace WebAPI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest();
+            return BadRequest(result);
         }
     }
 }

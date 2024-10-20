@@ -7,20 +7,19 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthorsController : ControllerBase
+    public class BookImagesController : ControllerBase
     {
-        IAuthorService _authorService;
+        IBookImageService _bookImageService;
 
-        public AuthorsController(IAuthorService authorService)
+        public BookImagesController(IBookImageService bookImageService)
         {
-            _authorService = authorService;
+            _bookImageService = bookImageService;
         }
-
 
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            var result = _authorService.GetAll();
+            var result = _bookImageService.GetAll();
             if (result.Success)
             {
                 return Ok(result);
@@ -28,10 +27,10 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("getbyauthorid")]
-        public IActionResult Get(int authorId)
+        [HttpGet("getimagebybookimageid")]
+        public IActionResult Get(int bookImageId)
         {
-            var result = _authorService.Get(authorId);
+            var result = _bookImageService.Get(bookImageId);
             if (result.Success)
             {
                 return Ok(result);
@@ -39,15 +38,15 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpPost("addauthor")]
-        public IActionResult Add(Author author)
+        [HttpPost("addbookimage")]
+        public IActionResult Add([FromForm] IFormFile formFile, [FromForm] BookImage bookImage)
         {
-            var result = _authorService.Add(author);
+            var result = _bookImageService.Add(formFile, bookImage);
             if (result.Success)
             {
                 return Ok(result);
             }
             return BadRequest(result);
-        }
+        } 
     }
 }

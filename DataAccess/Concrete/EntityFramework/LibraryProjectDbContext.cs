@@ -17,5 +17,6 @@ namespace DataAccess.Concrete.EntityFramework
 
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
+        public DbSet<BookImage> BookImages { get; set; }
     }
 }
