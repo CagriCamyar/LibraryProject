@@ -16,5 +16,15 @@ namespace Business.Constants
         public static string ImageDeleted = "Urun Icin Fotograf Silindi";
         public static string ImageUpdated = "Urun Icin Fotograf Guncellendi";
 
+        public static string UserAdded = "Yeni Kullanici Eklendi";
+        public static string UserDeleted = "Kullanici Silindi";
+        public static string UserUpdated = "Kullanici Bilgisi Guncellendi";
+        public static string UsersListed = "Kullanicilar Listelendi";
+        public static string GetUser = "Sectiginiz Kullanici : ";
+        public static string UsersListedWithDetails = "Kullanicilarin Detaylari Listelendi";
+
+        public static string AuthorizationDenied = "Bu Islem Icin Yetkiniz Yok";
+        public static string ClaimsListed = "Kullaniciya Ait Claimler Listelendi";
+        public static string GetUserByMail = "Bu Maile Sahip Kullanici : ";
     }
 }

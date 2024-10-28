@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Core.DataAccess.Concrete.EntityFramework
 {
-    public class EfRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
+    public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
         where TEntity : class , IEntity, new()
         where TContext : DbContext, new()
     {

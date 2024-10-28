@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfBookDal : EfRepositoryBase<Book, LibraryProjectDbContext>, IBookDal
+    public class EfBookDal : EfEntityRepositoryBase<Book, LibraryProjectDbContext>, IBookDal
     {
         public List<BookDetailDto> GetAllBookDetails()
         {

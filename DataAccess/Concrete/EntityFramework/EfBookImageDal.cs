@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfBookImageDal : EfRepositoryBase<BookImage, LibraryProjectDbContext>, IBookImageDal
+    public class EfBookImageDal : EfEntityRepositoryBase<BookImage, LibraryProjectDbContext>, IBookImageDal
     {
     }
 }
